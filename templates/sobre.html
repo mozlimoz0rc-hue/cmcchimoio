@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Sobre o Site</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="box--nav">
+
+                
+                <div class="header--text">
+
+                    <h1>Meet Chimoio</h1>
+                </div>
+                <button class="btnMN"><i class="fas fa-bars menu-icon" id="menuToggle"></i></button>
+                <nav id="bar">
+                    <ul>
+                        <a href="/"><li>Inicio</li></a>
+                        <a href="/cmc_comunicados"><li>Comunicados</li></a>
+                        <a href="/cmc_eventos"><li>Eventos</li></a>
+                        <a href="sobre_nos"><li>Sobre Nôs</li></a>
+                        <a href="/historia"><li>História</li></a>
+                        <a href="/contatos"><li><button>Contate Nôs</button></li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main id="main--his">
+        <div style="height: 96%; background-color: #00558877;" class="container">
+
+            <br>
+            <br>
+            <h1>Sobre o site</h1>
+
+            <a href="/contatos" ><button>Tenho Perguntas</button></a>
+
+               
+
+            </div>
+        </div>
+    </main>
+
+
+    <section>
+        <div style="display: flex;" class="container">
+            <div class="bx--barra"></div>
+            <div class="box--history">
+                <div class="box--img--history">
+                    <img src="{{url_for('static', filename='dadosCAC/panorama_praca_heroes.jpg')}}" />
+
+                </div>
+                <div class="box--content--history">
+                    <h3>A Portal da Cidade de Chimoio</h3>
+                    <P>Bem-vindo ao portal oficial do Conselho Municipal de Chimoio, o espaço digital criado para aproximar a autarquia da comunidade, promovendo transparência, participação cidadã e acesso facilitado às informações de interesse público.
+
+                    </P>
+
+                    <br>
+
+                    <h3>Nossa Missão</h3>
+
+                    <p>
+                        
+Trabalhamos diariamente para melhorar a qualidade de vida dos munícipes de Chimoio, promovendo o desenvolvimento urbano sustentável, o bem-estar social, a inclusão digital e a valorização da nossa rica história e cultura.
+
+                    </p>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div style="display: flex;" class="container">
+            <div class="bx--barra"></div>
+            <div class="box--history">
+                <div class="box--img--history">
+                    <img src="{{url_for('static', filename='dadosCAC/Ferreiras1.jpg')}}" />
+
+                </div>
+                <div class="box--content--history">
+                    <div class="section profile">
+                        <h2>Presidente Municipal: João Carlos Gomes Ferreira</h2>
+                        <p>João Ferreira é o atual presidente do município de Chimoio e também presidente da ANAMM (Associação Nacional dos Municípios de Moçambique). Ele está em seu segundo mandato no município e vinculado ao partido Frelimo.</p>
+                        <p>Algumas de suas principais ações:</p>
+                        <ul>
+                          <li>Liquidação de dívidas herdadas do mandato anterior, buscando reequilibrar as finanças municipais.</li>
+                          <li>Asfaltamento de cerca de 30 km de ruas esburacadas, melhorando a mobilidade urbana.</li>
+                          <li>Intensificação da limpeza urbana e coleta de resíduos.</li>
+                          <li>Investimento em esporte local, construção de balneários e apoio a clubes como Textáfrica.</li>
+                          <li>Projetos para expandir os limites do município e aumentar a base tributária.</li>
+                          <li>Incentivo à participação fiscal, alertando sobre os riscos da “desobediência fiscal” para os planos municipais.</li>
+                        </ul>
+                      </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+<section class="sc-and">
+        <div style="" class="container">
+            <h2>Conheça a cidade de Chimoio</h2>
+            <h4>Sistema Lançado sob liderança de: <b>João Ferreira</b></h4>
+            <div class="box--and--main">
+
+            
+                <div class="box--left">
+                    <div>
+                        <p>Redes Sociais</p>
+                        <div>
+                           <a href="https://www.facebook.com/cmchimoio"> <img src="{{url_for('static', filename='images/logos/facebook.png')}}"/></a>
+                            <img src="{{url_for('static', filename='images/logos/whatsapp.png')}}"/>
+                            <img src="{{url_for('static', filename='images/logos/gmail.png')}}"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box--right">
+                    <div>
+                        <p>Contatos</p>
+                        <div>
+                            <ul>
+
+                                <li>
+                                    258 879349149
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                    
+
+        </div>
+        <a style="color: #288;" href="/politicas">Políticas e Termos de Uso</a>
+        <h4>Site oficial do Conselho Municipal de Chimoio</h4>
+        </div>
+
+    </section>
+    <footer>© 2025 | Uma solução criada por BSoft Tecnology</footer>
+
+
+
+<script src="{{url_for('static', filename='js/main.js')}}">
+    </script>
+
+    
+</body>
+</html>
