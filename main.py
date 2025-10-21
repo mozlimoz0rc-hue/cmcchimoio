@@ -40,9 +40,9 @@ def loadDashCMC():
 	rotaCm = "Comunicados"
 	rotaMsg = "Mensagens"
 	
-	resEv = resInfoCm[rotaEv]
-	resCm = resInfoCm[rotaCm]
-	resMsg = resInfoCm[rotaMsg]
+	resEv = resInfoCm.get(rotaEv, {})
+	resCm = resInfoCm.get(rotaCm, {})
+	resMsg = resInfoCm.get(rotaMsg, {})
 	
 	
 	
@@ -376,7 +376,7 @@ def loadComunic():
 	
 	rotaCm = "Comunicados"
 	
-	resCm = resInfoCm[rotaCm]
+	resCm = resInfoCm.get(rotaCm, {})
 	
 	
 	
@@ -562,7 +562,7 @@ def loadEvent():
 	
 	rotaEv = "Eventos"
 	
-	resEv = resInfoCm[rotaEv]
+	resEv = resInfoCm.get(rotaEv, {})
 	
 	
 	
@@ -755,8 +755,8 @@ def loadComunicEvent():
 	rotaEv = "Eventos"
 	rotaCm = "Comunicados"
 	
-	resEv = resInfoCm[rotaEv]
-	resCm = resInfoCm[rotaCm]
+	resEv = resInfoCm.get(rotaEv, {})
+	resCm = resInfoCm(rotaCm, {})
 	
 	
 	
@@ -1052,8 +1052,8 @@ def loadComunicEventf_cac():
 	rotaEv = "Eventos"
 	rotaCm = "Comunicados"
 	
-	resEv = resInfoCm[rotaEv]
-	resCm = resInfoCm[rotaCm]
+	resEv = resInfoCm.get(rotaEv, {})
+	resCm = resInfoCm.get(rotaCm, {})
 	
 	
 	
@@ -1281,6 +1281,8 @@ def loadCommitDash(tituloev,dataev,detalheev, url_imgev):
 	resGet = req.get(urlBase)
 	
 	resDiciEv =  resGet.json()
+	if resDiciEv == None:
+		resDiciEv = {}
 	listIdsEv = []
 	for cEve in resDiciEv:
 		
@@ -1294,7 +1296,8 @@ def loadCommitDash(tituloev,dataev,detalheev, url_imgev):
 			
 			listIdsEv.append(numIdInt)
 	
-	
+	if len(listIdsEv) == 0:
+		listIdsEv = [0]
 	lastId = max(listIdsEv)
 	
 	
@@ -1345,6 +1348,9 @@ def loadCommitDashCm(titulocm,datacm,detalhecm,url_imgcm,chechfeitocm):
 	resGet = req.get(urlBase)
 	
 	resDiciCm =  resGet.json()
+
+	if resDiciCm == None:
+		resDiciCm = {}
 	listIdsCm = []
 	for cComu in resDiciCm:
 		
@@ -1358,6 +1364,8 @@ def loadCommitDashCm(titulocm,datacm,detalhecm,url_imgcm,chechfeitocm):
 			
 			listIdsCm.append(numIdInt)
 	
+	if len(listIdsCm) == 0:
+		listIdsCm = [0]
 	
 	lastId = max(listIdsCm)
 	
@@ -1458,8 +1466,8 @@ def loadSearchevcm(dadoPesq, typeSearch):
 	rotaEv = "Eventos"
 	rotaCm = "Comunicados"
 	
-	resEv = resInfoCm[rotaEv]
-	resCm = resInfoCm[rotaCm]
+	resEv = resInfoCm.get(rotaEv, {})
+	resCm = resInfoCm.get(rotaCm, {})
 	
 	
 	
@@ -1752,6 +1760,8 @@ def sendMensageCMC(nome,tel,email,msg):
 	resGetMsg = req.get(urlBase)
 	resGetMsg = resGetMsg.json()
 	
+	if resGetMsg == None:
+		resGetMsg = {}
 	listIdsMsg = []
 	
 	for cMsg in resGetMsg:
@@ -1803,7 +1813,8 @@ def dellInfoNewsCMCMsg(typeInfoMsg,numIdInfoMsg):
 	
 	resMsg = req.get(urlBase)
 	
-	
+	if resMsg == None:
+		resMsg = {}
 	resMsg = resMsg.json()
 	
 	
@@ -2015,6 +2026,8 @@ def doReadedMsgCMC(msgF):
 	
 	resM = resM.json()
 	
+	if resM == None:
+		resM = {}
 	
 	for cMsg in resM:
 		
@@ -2395,4 +2408,3 @@ def politicasPrivacidade():
 	
 	return render_template("politicaseprivacidade.html")
 
-#app.run(debug="True")
