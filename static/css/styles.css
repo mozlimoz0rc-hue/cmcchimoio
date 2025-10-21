@@ -120,7 +120,7 @@ button:hover {
 main{
     
     
-    
+    height: 90vh;
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -695,7 +695,7 @@ footer{
 }
 
 #main--m2{
-    height: 50vh;
+    height: 90vh;
 }
 
 #main--m2 input{
@@ -726,7 +726,7 @@ footer{
 }
 
 #main--his{
-    height: 30vh;
+    height: 50vh;
     color: white;
 }
 /* pop */
@@ -909,7 +909,7 @@ section .container .box--card--pop img{
 /* main contates button */
 
 #main--cont{
-    height: 30vh;
+    height: 50vh;
 
 
 }
