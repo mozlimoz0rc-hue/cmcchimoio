@@ -96,7 +96,7 @@ function showMsg() {
 
 function allMsgread(){
  
-	alert("mensagens lidas ");
+	//alert("mensagens lidas ");
 	
 	
 			formData = new FormData();
@@ -111,7 +111,7 @@ function allMsgread(){
             })
             .then(response => response.json())
             .then(data => {
-                alert(data[0]);
+                //alert(data[0]);
                 //bodyNotas.innerHTML = "";
                 //bodyNotas.innerHTML = data[1]
                 
