@@ -364,6 +364,8 @@ section.hidden {
 
 .mbox--edit{
     text-align: center;
+    display: flex;
+    
 }
 
 /* animacao */
@@ -753,6 +755,12 @@ section.hidden {
     
     .box--add{
         margin: 8px auto;
+        
+    }
+
+    .mbox--edit{
+       
+    flex-direction: column;
         
     }
     
