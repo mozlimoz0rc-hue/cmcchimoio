@@ -2395,4 +2395,4 @@ def politicasPrivacidade():
 	
 	return render_template("politicaseprivacidade.html")
 
-app.run(debug="True")
+#app.run(debug="True")
