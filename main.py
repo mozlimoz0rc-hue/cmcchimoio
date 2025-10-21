@@ -756,7 +756,7 @@ def loadComunicEvent():
 	rotaCm = "Comunicados"
 	
 	resEv = resInfoCm.get(rotaEv, {})
-	resCm = resInfoCm(rotaCm, {})
+	resCm = resInfoCm.get(rotaCm, {})
 	
 	
 	
