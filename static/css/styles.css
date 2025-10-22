@@ -642,6 +642,15 @@ footer{
     h4{
     	color: var(--primary-color);
     }
+
+	h3{
+			display: -webkit-box;
+	  -webkit-line-clamp: 2;  /* número máximo de linhas */
+	  -webkit-box-orient: vertical;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  
+		}
     
     p{
     	display: -webkit-box;
