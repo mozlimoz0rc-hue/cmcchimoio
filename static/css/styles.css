@@ -1071,7 +1071,22 @@ section .container .box--card--pop img{
     }
     
     
+    .box--content--history ul{
+    background-color: var(--primary-color);
+    padding: 3px;
+    border-radius: 12px;
     
+}
+
+.box--content--history ul li{
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--hover-shadow);
+    margin-top: 10px;
+    padding: 2px;
+    list-style: none;
+    
+}
     .box--card--main{
     	padding: 4px;
     	
