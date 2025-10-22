@@ -44,7 +44,7 @@ main .container{
 }
 
 .box--card{
-		height: 400px;
+		height: 450px;
 		div{
 		padding: 8px;
 		}
@@ -79,7 +79,9 @@ main .container{
         }
     }
 
-
+.bxdh{
+	height: 400px;
+}
 /* stilizando o popup Delete   */
 
 .main--pop-dl{
