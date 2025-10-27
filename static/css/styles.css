@@ -116,9 +116,7 @@ button:hover {
 	padding: 4px 6px;
 }
 
-#m-index{
-	height: 90vh;
-}
+
 main{
     
     
@@ -208,7 +206,7 @@ main{
 
 .box--card{
     width: 30%;
-    height: 390px;
+    height: 370px;
      background: linear-gradient(145deg, #ffa726, #fb8c00);
       color: #333;
   border-radius: 20px;
@@ -408,6 +406,7 @@ section{
 
   
 .main--comunic{
+
 
 }
 .sc--comunic{
@@ -630,7 +629,7 @@ footer{
 .box--card--main{
     background-color:  #ffffffae;
     padding: 20px 10px;
-    height: 85%;
+    height: 90vh;
     color: rgb(255, 255, 255);
     box-shadow: var(--light-shadow);
     backdrop-filter: blur(4px);
@@ -641,16 +640,13 @@ footer{
     
     h4{
     	color: var(--primary-color);
-    }
-
-	h3{
-			display: -webkit-box;
-	  -webkit-line-clamp: 2;  /* número máximo de linhas */
+        display: -webkit-box;
+	  -webkit-line-clamp: 1;  /* número máximo de linhas */
 	  -webkit-box-orient: vertical;
 	  overflow: hidden;
 	  text-overflow: ellipsis;
 	  
-		}
+    }
     
     p{
     	display: -webkit-box;
@@ -668,6 +664,15 @@ footer{
     	display: flex;
     	
     	gap: 10px;
+
+        h3{
+            display: -webkit-box;
+	  -webkit-line-clamp: 3;  /* número máximo de linhas */
+	  -webkit-box-orient: vertical;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  
+        }
     	
     	img{
     	
@@ -706,7 +711,7 @@ footer{
 }
 
 #main--m2{
-    height: 90vh;
+    height: 80vh;
 }
 
 #main--m2 input{
@@ -920,7 +925,7 @@ section .container .box--card--pop img{
 /* main contates button */
 
 #main--cont{
-    height: 50vh;
+    height: 60vh;
 
 
 }
@@ -1001,7 +1006,7 @@ section .container .box--card--pop img{
     }
     
     #main--cont{
-        height: 50vh;
+        height: 80vh;
     }
     
     .box--social--contactes{
@@ -1080,22 +1085,7 @@ section .container .box--card--pop img{
     }
     
     
-    .box--content--history ul{
-    background-color: var(--primary-color);
-    padding: 3px;
-    border-radius: 12px;
     
-}
-
-.box--content--history ul li{
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: var(--hover-shadow);
-    margin-top: 10px;
-    padding: 2px;
-    list-style: none;
-    
-}
     .box--card--main{
     	padding: 4px;
     	
