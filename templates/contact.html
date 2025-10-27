@@ -12,13 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Eletro Solucoes </title>
-
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
-
+  <title>Eletro Soluções</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -32,28 +26,30 @@
   <!-- responsive style -->
   <link href="{{url_for('static',filename='css/responsive.css')}}" rel="stylesheet" />
 
+
 </head>
 
 <body>
-  
+  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div style="background-color: #0355cc;" class="header_bottom">
+     
+      <div style="background-color: #0355cc;"  class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
               
-               Eletro Solucoes
+              Eletro Soluções
               
             </a>
 
-            <button style="color: white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ">
-                <li class="nav-item active">
+                <li class="nav-item ">
                   <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -62,205 +58,125 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/services">Services</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="/contact">Contact Us</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/findpeca">Search Peca</a>
-                </li>
               </ul>
             </div>
           </nav>
         </div>
       </div>
     </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section id="sc-main" class="slider_section ">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-6 ">
-            <div class="detail-box">
-              <h1>
-                Loja do Mecânico<br>
-Peças para Todos os Tipos de Viaturas
-
-              </h1>
-              <p>
-                
-              </p>
-              <a href="/contact">
-                Contacte-nos
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="img-box">
-              <img src="{{url_for('static', filename='imgGame/trr1.png')}}" alt="imagem de lionel messi">
-            </div>
-            
-          
-          </div>
-          <div class="col-md-6">
-          <div class="droid-box">
-             <a href="/contact">
-                Contacte-nos
-              </a>
-              
-             </div>
-            </div>
-          
-         
-        </div>
-      </div>
+    <section class="sc-contact-info" style="text-align: center; padding-top: 30px;" >
+    	<div class="container" >
+    	
+    	<h4 style="color: #0008; font-size: 20px;">Pode nos contactar com os meios listados ai em baixo 24h/24h atendimento! Nao exite contacte nos.
+    	</h4>
+    	
+    	
+    	</div>
+    
+    
     </section>
-    <!-- end slider section -->
-  
+    <!-- end header section 
+,6782.AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdm
+-->
 
   <!-- feature section -->
-  
-<section>
-  <div>
-    <div>
-      <div><h3><br></h3></div>
+  <section style="padding: 20px 10px; margin: 0px;" class="feature_section">
+    <div class="container">
+      <div class="feature_container">
+        <div class="box">
+          <div
+          class="box_imgBand"
+          >
+              <img class="imgBand" src="{{url_for('static',filename='icons/whatsapp.png')}}" >
+              
+          </div>
+          <h5 class="name">
+            Whatsapp
+          </h5>
+          	<a href="https://wa.link/3wnebv" >
+          
+              <button id="custom-amer" class="btnCzone2Moz" >
+                  Contacto
+ <i class="fa fa-whatsapp" aria-hidden="true"></i>
+ 
+              </button>
+              </a>
+              
+        </div>
+        <div class="box active">
+          <div class="box_imgBand">
+            <img class="imgBand" src="{{url_for('static',filename='icons/facebook.png')}}">
+          </div>
+          <h5 class="name">
+            Facebook
+          </h5>
+          <a href="https://wa.link/3wnebv" >
+              <button class="btnCzone2Moz" >
+                  Contactos 
+ <i class="fa fa-facebook aria" hidden="true"></i>
+ 
+              </button>
+              </a>
+        </div>
+        <div class="box">
+          <div class="box_imgBand">
+             <img class="imgBand" src="{{url_for('static',filename='icons/telefone.png')}}">
+          </div>
+          <h5 class="name">
+            Telefone
+          </h5>
+ <i class="fa fa-arrow" aria-hidden="true"></i>
+          <a href="https://wa.link/3wnebv" >
+              <button class="btnCzone2Moz" >
+                  Contactos
+ <i class="fa fa-phone" aria-hidden="true"></i>
+ 
+              </button>
+              </a>
+              
+        </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- end feature section -->
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-6">
-          <div class="detail-box">
-            <h2>
-              Sobre Nos
-            </h2>
-            <p>
-             A Eletro Soluções é especializada na venda de peças mecânicas para viaturas de todos os portes, desde modelos comuns até esportivos.
-             Nosso compromisso é oferecer produtos de qualidade, que garantam desempenho, durabilidade e segurança para o seu veículo.
-            </p>
-            <a href="/about">
-              Ler Mais
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="{{url_for('static', filename='imgGame/BG1.png')}}" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="client_section">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Encontre a Peça Perfeita para o Seu Veículo
-
-        </h2>
-        
-      </div>
-      
-      <div class="slider--wrapper">
-      <div class="main--box--sell swiper-wrapper">
-      
-      {{products | safe}}
-      
-
-        
-
-        
-      </div>
-      <br>
-      
-    </div>
-   
-  </section>
-  <section class="sc_cl_btn">
-   <a class="btnCx" href="/findpeca">
-      MAIS PECAS
-      </a>
-  </section>
-<br>
-  <!-- end client section -->
-<section  class="about_section layout_padding-bottom" >
-  <div class="container">
-  <div class="row">
-        <div class="col-lg-5 col-md-6">
-          <div class="detail-box">
-            <h2>
-             Serviços que Oferecemos
-            </h2>
-            <p>
-             Na Eletro Soluções, você pode reservar uma peça online ou realizar a compra pela internet e receber sua encomenda no conforto da sua casa, através do nosso serviço de entrega.
-
-            </p>
-            <a href="/services">
-              Saiba Mais
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="{{url_for('static', filename='imgGame/BG4.jpg')}}" alt="">
-          </div>
-      </div>
-    </div>
-
-
-      </section>   
-  </section>
-
-  <!-- end professional section -->
-
-  <!-- service section -->
-
-
-
-  <!-- end service section -->
-
-  <!-- client section -->
-
-  
-  <!-- contact section -->
 
   <section class="contact_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
-          Contacte-nos
-
+          Contacte nos com  o E-mail
         </h2>
+        
       </div>
       <div class="row">
         <div class="col-md-6">
-          <form class="form1" id="formSendG"  method="POST" action="/">
+          <form method="POST" action="/contact">
             <div>
-              <input name="nome" class="inp" type="text" placeholder="Name" />
+              <input name="nome" type="text" placeholder="Nome Completo" />
             </div>
             <div>
-              <input  name="tell" class="inp" type="number" placeholder="Phone Number" />
+              <input name="tell" type="number" placeholder="Numero de Telefone" />
             </div>
-            <div class="inp">
-              <input name="email" class="inp" type="email" placeholder="Email" />
+            <div>
+              <input name="email" type="email" placeholder="Email" />
             </div>
-            <div class="inp">
-              <input name="msg" class="inp" type="message" class="message-box" placeholder="Message" />
-              <input type="hidden" name="_subject" value="New submission!">
+            <div>
+              <input name="msg" type="message" class="message-box" placeholder="Mensanges" />
             
+              <input type="hidden" name="_subject" value="New submission!">
             </div>
-          
-<button type="submit" class="btnCx">
-  
-              ENVIAR
-</button>
-  <!-- end service s-->
+            <div class="d-flex ">
+              <button type="submit">
+                SEND
+              </button>
+            </div>
           </form>
         </div>
         <div class="col-md-6">
@@ -276,17 +192,10 @@ Peças para Todos os Tipos de Viaturas
 
   <!-- end contact section -->
 
-<section>
- 	<div class="container">
- 		<a href="/eletro-admin-login">
- 			<div class=>	
- 				<p>{{go_dash}}</a>
- 			</div>
- 		</a>
- 	
- 	</div>
 
-</section>
+  <!-- info section -->
+  <!-- info section -->
+  </section>
   <!-- info section -->
   <section style="background-color: #0355cc;" class="info_section ">
     <div class="container">
@@ -315,7 +224,7 @@ Peças para Todos os Tipos de Viaturas
   
             <i style="width: 20px;" class="fa fa-envelope" aria-hidden="true"></i>
   
-            <p>buchsoft@gmaiware.gmail.com</p>
+            <p>buchsoftware@gmail.com</p>
           </div>
           <div></div>
     </div>
@@ -331,17 +240,20 @@ Peças para Todos os Tipos de Viaturas
 
 
 
+
   <!-- end info_section -->
 
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <p>
-        &copy; <span id="displayDateYear"></span> desenvolvida pela 
-        <a href="https://bsoft-tecnology-production.up.railway.app/projectos-bsoft">BSoft Tecnologias</a>
+        &copy; <span id="displayDateYear"></span> developed by
+        <a href="https://bsoft-tecnology-production.up.railway.app/projectos-bsoft"> BSoft Technology</a>
       </p>
     </div>
   </footer>
+  <!-- footer section -->
+  
   <!-- footer section -->
  <script src=
 "https://cdn.jsdelivr.net/npm/sweetalert2@10">
@@ -356,6 +268,7 @@ Peças para Todos os Tipos de Viaturas
                     text: 'Nao podes conctatar o agente da America, Conctate agente da regiao proxima!',
                     icon: 'info',
                     confirmButtonText: 'Agente de mocambique 848416624'
+                    
                 });
             });
         </script>
@@ -388,28 +301,10 @@ Peças para Todos os Tipos de Viaturas
     </script>
 
 
-<!-- scroll bar -->
-  <script>
-    const swiper = new Swiper('.slider--wrapper',{
-      loop: true,
+  
 
 
-      // pagination
 
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
   <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylecheet" href="css/style.css">
+    
+    <title>Reservar Item</title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div style="text-align: center; padding: 7px; border-radius: 10px; background-color:#0355cc55; ;" class="freserv">
+                <form action="{{lpost}}" method="post">
+                <h4>Reservar Item</h4>
+                    <h2>{{nomeProd}}</h2>
+                    <p>artigo n°: {{artigoN}}</p>
+                    <input placeholder="Nome" style="border-radius: 10px; margin-bottom: 10px; height:30px; width:270px" name="nome">
+                    <input placeholder="Numero" style="border-radius: 10px; margin-bottom: 10px; height:30px; width:270px" name="tell">
+                    <input placeholder="Email" style="border-radius: 10px; margin-bottom: 10px; height: 30px; width:270px" nome="email">
+                    <br>
+                    <textarea placeholder="nota Adicional(opicional)" style="border-radius: 10px; border: 2px solid #1a6e7971; margin-top:10px; height:100px; width:270px" name="nota_add">
+
+                        
+                    </textarea><br>
+                    <br>
+                    <button type="submit" style="border-radius: 10px; padding:10px 5px; color: white; background-color:cadetblue;">FAZER RESERVA</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    
+    {% if dataMsg %}
+        <script>
+            alert("{{ dataMsg }}");
+        </script>
+    {% endif %}
+    
+    <script>
+    
+    
+    
+    </script>
+    
+    
+</body>
+</html>

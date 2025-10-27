@@ -12,14 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Eletro Solucoes </title>
-
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
-
-
+  <title>Eletro Soluções </title>
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- bootstrap core css -->
@@ -32,22 +25,24 @@
   <!-- responsive style -->
   <link href="{{url_for('static',filename='css/responsive.css')}}" rel="stylesheet" />
 
+
 </head>
 
 <body>
   
     <!-- header section strats -->
     <header class="header_section">
+      
       <div style="background-color: #0355cc;" class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
               
-               Eletro Solucoes
+              Eletro Soluções
               
             </a>
 
-            <button style="color: white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
             </button>
 
@@ -66,8 +61,7 @@
                   <a class="nav-link" href="/contact">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/findpeca">Search Peca</a>
-                </li>
+                  <a class="nav-link" href="#">Search Peca</a>
               </ul>
             </div>
           </nav>
@@ -82,211 +76,60 @@
           <div class="col-md-6 ">
             <div class="detail-box">
               <h1>
-                Loja do Mecânico<br>
-Peças para Todos os Tipos de Viaturas
-
+                Pesquise <br>
+                
+                sua Peca
               </h1>
               <p>
                 
               </p>
-              <a href="/contact">
+              <a href="contact.html">
                 Contacte-nos
               </a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="img-box">
-              <img src="{{url_for('static', filename='imgGame/trr1.png')}}" alt="imagem de lionel messi">
-            </div>
-            
-          
-          </div>
-          <div class="col-md-6">
-          <div class="droid-box">
-             <a href="/contact">
-                Contacte-nos
-              </a>
               
-             </div>
             </div>
-          
-         
+          </div>
         </div>
       </div>
     </section>
     <!-- end slider section -->
   
-
   <!-- feature section -->
   
-<section>
-  <div>
-    <div>
-      <div><h3><br></h3></div>
-    </div>
-  </div>
-</section>
+
   <!-- end feature section -->
 
   <!-- about section -->
 
-  <section class="about_section layout_padding-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-6">
-          <div class="detail-box">
-            <h2>
-              Sobre Nos
-            </h2>
-            <p>
-             A Eletro Soluções é especializada na venda de peças mecânicas para viaturas de todos os portes, desde modelos comuns até esportivos.
-             Nosso compromisso é oferecer produtos de qualidade, que garantam desempenho, durabilidade e segurança para o seu veículo.
-            </p>
-            <a href="/about">
-              Ler Mais
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="{{url_for('static', filename='imgGame/BG1.png')}}" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="client_section">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Encontre a Peça Perfeita para o Seu Veículo
-
-        </h2>
-        
-      </div>
-      
-      <div class="slider--wrapper">
-      <div class="main--box--sell swiper-wrapper">
-      
-      {{products | safe}}
-      
-
-        
-
-        
-      </div>
-      <br>
-      
-    </div>
-   
-  </section>
-  <section class="sc_cl_btn">
-   <a class="btnCx" href="/findpeca">
-      MAIS PECAS
-      </a>
-  </section>
-<br>
-  <!-- end client section -->
-<section  class="about_section layout_padding-bottom" >
-  <div class="container">
-  <div class="row">
-        <div class="col-lg-5 col-md-6">
-          <div class="detail-box">
-            <h2>
-             Serviços que Oferecemos
-            </h2>
-            <p>
-             Na Eletro Soluções, você pode reservar uma peça online ou realizar a compra pela internet e receber sua encomenda no conforto da sua casa, através do nosso serviço de entrega.
-
-            </p>
-            <a href="/services">
-              Saiba Mais
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="{{url_for('static', filename='imgGame/BG4.jpg')}}" alt="">
-          </div>
-      </div>
-    </div>
-
-
-      </section>   
-  </section>
-
-  <!-- end professional section -->
-
-  <!-- service section -->
-
-
-
-  <!-- end service section -->
-
-  <!-- client section -->
-
   
-  <!-- contact section -->
+  <section class="client_section ">
+    <div style="text-align: center;" class="container">
+      <h2>Encontre a Peça Perfeita para o Seu Veículo
+      </h2>
+      <form method="post" action="/findpeca" enctype="multipart/form-data">
+      <input name="in_search" placeholder="pesquise a peca">
+      <button type="submit">Pesquisar</button>
+    </form>
+    <br>
 
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Contacte-nos
+      <div class="main--box--sell">
 
-        </h2>
+        
+       {{products |safe}}
+
+
+
+
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form class="form1" id="formSendG"  method="POST" action="/">
-            <div>
-              <input name="nome" class="inp" type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input  name="tell" class="inp" type="number" placeholder="Phone Number" />
-            </div>
-            <div class="inp">
-              <input name="email" class="inp" type="email" placeholder="Email" />
-            </div>
-            <div class="inp">
-              <input name="msg" class="inp" type="message" class="message-box" placeholder="Message" />
-              <input type="hidden" name="_subject" value="New submission!">
-            
-            </div>
-          
-<button type="submit" class="btnCx">
-  
-              ENVIAR
-</button>
-  <!-- end service s-->
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap" style="width:100%;height:100%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </section>
-
-  <!-- end contact section -->
-
-<section>
- 	<div class="container">
- 		<a href="/eletro-admin-login">
- 			<div class=>	
- 				<p>{{go_dash}}</a>
- 			</div>
- 		</a>
- 	
- 	</div>
-
-</section>
+  <div style="width: 100%; height:50px;"></div>
+ </section>
   <!-- info section -->
   <section style="background-color: #0355cc;" class="info_section ">
     <div class="container">
@@ -315,7 +158,7 @@ Peças para Todos os Tipos de Viaturas
   
             <i style="width: 20px;" class="fa fa-envelope" aria-hidden="true"></i>
   
-            <p>buchsoft@gmaiware.gmail.com</p>
+            <p>buchsoftware.gmail.com</p>
           </div>
           <div></div>
     </div>
@@ -337,11 +180,25 @@ Peças para Todos os Tipos de Viaturas
   <footer class="footer_section">
     <div class="container">
       <p>
-        &copy; <span id="displayDateYear"></span> desenvolvida pela 
-        <a href="https://bsoft-tecnology-production.up.railway.app/projectos-bsoft">BSoft Tecnologias</a>
+        &copy; <span id="displayDateYear"></span> desenvolvida pela
+        <a href="https://bsoft-tecnology-production.up.railway.app/projectos-bsoft"> BSoft Tecnologias</a>
       </p>
     </div>
   </footer>
+  
+
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  
   <!-- footer section -->
  <script src=
 "https://cdn.jsdelivr.net/npm/sweetalert2@10">
@@ -373,43 +230,9 @@ Peças para Todos os Tipos de Viaturas
                 });
             });
     </script>
-    
-    <script>
-    	dado = "{{pop}}";
-    	
-    	if (dado == ""){
-    	
-    	}else{
-    		alert(dado);
-    	}
-    
-    	
-    
-    </script>
 
 
-<!-- scroll bar -->
-  <script>
-    const swiper = new Swiper('.slider--wrapper',{
-      loop: true,
 
-
-      // pagination
-
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
   <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">

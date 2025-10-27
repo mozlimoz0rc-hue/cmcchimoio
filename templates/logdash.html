@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylecheet" href="css/style.css">
+    
+    <title>Autenticar Administrador</title>
+    <style>
+
+
+body{
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    padding-top: 3%;
+}
+.main--login{
+    display: flex;
+    height: 300px;
+    margin: 30px 20%;  
+    text-align: center; 
+    padding: 0px; 
+    border-radius: 20px; 
+    background-color:#0355cc55 ;
+}
+.d--campany{
+    background: rgb(65, 102, 180);
+    border-radius: 20px 25% 25% 20px;
+    width: 49%;
+    color: white;
+    padding: 10px;
+}
+
+.d--campany img{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    
+}
+form{
+    background-color: none ;
+    width: 49%;
+}
+form button{
+	width: 200px;
+	padding: 10px 5px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+form input{
+    border-radius: 20px; 
+    margin-bottom: 10px; 
+    height:30px; 
+    width:270px;
+
+}
+@media(max-width: 960px){
+    .main--login{
+        
+        height: 300px;
+        margin: 30px 10%;  
+    }
+}
+@media(max-width: 840px){
+    .main--login{
+        
+        height: 300px;
+        margin: 30px 5%;  
+    }
+
+}
+
+@media(max-width: 640px){
+    .main--login{
+        margin: 30px 15%;
+        display: block;
+        height: 500px;
+        text-align: center;
+    }
+
+    .d--campany{
+        width: 100%;
+        border-radius: 20px 30px 25% 25%;
+        padding: 0px;
+        padding-bottom: 20px
+    }
+
+    .d--campany p{
+        padding: 10px;
+    }
+
+    form{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 595px){
+
+    .main--login{
+
+        
+
+        height: 100%;
+
+        margin: 20px 5%;  
+
+    }
+    
+ 
+
+
+
+    form input{
+
+
+
+        width: 90%;
+
+    }
+
+    
+    
+    .d--campany p{
+
+        
+        
+        padding: 0px;
+
+        padding-bottom: 5px
+
+    }
+
+    
+.d--campany img{
+
+    width: 50px;
+
+    height: 50px;
+
+    padding: 0px;
+    margin: 0px;
+    
+
+}
+
+    body{
+        padding-top: 3px;
+        margin-top: 3px;
+    }
+    
+
+
+}
+
+
+@media (max-width: 576px) {
+	.info--bottom--card{
+		min-width: 90%;
+		
+	}
+	body{
+		background-color: #0355cc55;
+	}
+
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="main--login" style="">
+                
+                <div class="d--campany">
+
+                    <div class="logo-login">
+                        <img style="margin-top: 10px; width: 50px; height: 50px; border-radius: 25px;" src="{{url_for('static', filename='icons/iconsolu.png')}}" />
+                    </div>
+                    <div class="content-main-login">
+                        <h2 class="title--login">
+                            Eletro Soluções
+                        </h2>
+
+                        <p>Acesse o sistema inserindo suas credenciais de administrador.
+                            
+                        </p>
+                    </div>
+                </div>
+                <form method= "post"  action="/eletro-admin-login">
+                    <h2>Faca Login Admin</h2><br>
+                    <p>{{info}}</p>
+                    <input type="name" name="nome" placeholder="Usuario" >
+                    <br>
+                    <input type="password" name="senha" placeholder="Código de Autenticação">
+                                  
+                    
+                    <br>
+                    
+                    
+                        <button type="submit">Acessar Admin</button>
+
+                    
+                </form>
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>

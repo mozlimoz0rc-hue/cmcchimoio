@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylecheet" type="text/css" href="css/style2.css"/>
+    <!-- font awesome style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body{
+    display: flex;
+
+}
+
+.mycampany{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 115px;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+    padding: 0 1.7rem;
+    transition: all 0.5s linear;
+    background-color: darkorange;
+}
+
+.mycampany:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    height: 83%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    
+    
+
+}
+
+
+.menu li{
+    padding: 1rem;
+    margin: 8px 0px;
+    border-radius: 9px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active{
+    background-color: #ddddc788;
+
+}
+
+.menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+
+
+
+}
+
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* main content */
+
+.main--content{
+    background-color: #0000ff46;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img{
+
+    width: 50px;
+    height: 50x;
+    cursor:pointer;
+    border-radius: 50%;
+
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #0000ff46;
+    border-radius: 10px;
+    padding: 10px 3rem;
+    margin-bottom: 1rem;
+
+}
+
+.header--title{
+    color: rgb(191, 126, 46);
+}
+
+.user--info{
+display: flex;
+align-items: center;
+gap: 1;
+}
+
+.search--bok{
+    background-color: beige;
+    border-radius: 15px;
+    color: darkorange;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    padding: 4px 12px;
+
+}
+
+.search--bok input{
+    background: transparent;
+    padding: 10px;
+    display: none;
+}
+
+.search--bok input:hover{
+    transform: scale(1.1);
+}
+
+
+.search--bok i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    display: none;
+
+}
+
+.search--bok i:hover{
+    transform: scale(1.1);
+}
+
+
+
+/* main conteiners */
+.card--container{
+    background-color: #0000ff46;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+}
+
+.main--title{
+    color: darkorange;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+
+.payment--card{
+
+    background-color: #0000ff46;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.payment--card:hover{
+    transform: translateY(-5px);
+}
+
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.amoumt{
+    display: flex;
+    flex-direction: column;
+}
+.amount--value{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.icon{
+    color: white;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: red;
+
+
+}
+
+.card--detail{
+    font-size: 18px;
+    color: #0000ff69;
+    letter-spacing: 2px;
+}
+
+/* color ccss */
+
+.light-red{
+    background: rgb(251, 233, 233);
+}
+
+.light-purple{
+    background: rgb(254,226,254);
+}
+
+.light-green{
+    background: rgb(235,254,235);
+
+}
+
+.light-blue{
+    background: rgb(236,236,254);
+}
+
+.dark-red{
+    background: red;
+}
+
+.dark-purple{
+    background: purple;
+
+
+}
+
+.dark-green{
+    background: green;
+}
+
+.dark-blue{
+    background: blue;
+}
+
+/* info wrapper */
+
+.my--info--wrapper{
+    display: none;
+    background: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.info--logo{
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.head--info{
+    width: 100%;
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.info--name{
+    background-color: rgba(102, 51, 153, 0);
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+
+
+.content--info{
+    text-align: left;
+}
+
+
+.content--info p{
+
+    background-color: darkseagreen;
+    margin-top: 2px;
+    padding: 7px 7px;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.content--info button{
+    background-color:#0000ff46;
+    border-radius: 6px;
+    padding: 10px 5px;
+    margin-top: 0.5rem;
+}
+
+.content--info button:hover{
+    background-color: #ff000046;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+
+
+/* ****8 msg wrapper****** */
+
+
+.msg--wrapper{
+	display: none;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.head--msg{
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.head--msg img{
+    width: 60px;
+    height: 60px;
+}
+.logo--msg{
+    background-color: white;
+    width: 62px;
+    border-radius: 50%;
+}
+
+
+.content--msg{
+    background-color: rgba(255, 255, 0, 0);
+    padding: 1rem;
+}
+
+.msg{
+
+    background-color: rgba(0, 255, 255, 0.283);
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+}
+
+.msg--name{
+
+    background-color: #063fb182;
+    border-radius: 10px;
+    margin: 5px;
+    width: 37%;
+    padding: 7px 5px;
+    color: white;
+}
+
+.msg--body{
+
+    width: 100%;
+    background-color: #063fb182;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 700px){
+	.msg{
+		width: 100%;
+	}
+}
+/* *******  Stattistic Wraper ******* */
+
+.statistic--wrapper{
+	display: none;
+    background-color:#054c9261;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.head--statistic{
+    background-color: #0000ff46;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.content--statistic{
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.box--graf--visite{
+
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.box--graf--reserv{
+
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.box--graf--info--visite p{
+
+    background-color: #0000ff46;
+    margin-top: 4px;
+    padding: 8px 3px;
+}
+
+.box--graf--info--reserv p{
+
+background-color: #0000ff46;
+margin-top: 4px;
+padding: 8px 3px;
+}
+
+/* ****** settings wrapper ***** */
+
+.settings--wrapper{
+	display: none;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 1rem;
+
+}
+
+
+.head--settings{
+    background-color: #0000ff69;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo--settings{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.logo--settings img{
+    width: 100%;
+}
+
+.content--settings{
+    padding: 10px;
+}
+
+.card--settings{
+    background-color: rgba(102, 51, 153, 0.154);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.settings--edit--info{
+    width: 270px;
+    height: 140px;
+    background-color: rgba(17, 88, 88, 0.661);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.settings--change--pass .box--icon--pass{
+    width: 60px;
+height: 60px;
+border-radius: 50%;
+}
+
+.settings--change--pass .box--icon--pass img{
+    width: 100%;
+}
+
+
+.settings--edit--info .box--icon--info{
+    width: 60px;
+height: 60px;
+border-radius: 50%;
+
+}
+
+.settings--edit--info .box--icon--info img{
+    width: 100%;
+}
+
+
+
+.settings--change--pass{
+    width: 270px;
+    height: 140px;
+    
+    background-color: rgba(56, 30, 107, 0.596);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+}
+
+.settings--change--pass:hover{
+    background-color:  rgba(56, 30, 107, 0.303);
+    transition: 0.5s ease-in;
+}
+
+
+.settings--edit--info:hover{
+    background-color:  rgba(17, 88, 88, 0.331);
+    transition: 0.5s ease-in;
+}
+
+#c-pass{
+	display: none;
+
+}
+
+#c-info{
+	display: block;
+}
+
+.settings--form{
+    background-color: #0000ff69;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+.form--change--pass input{
+
+    height: 35px;
+    margin-top: 6px;
+    border-radius: 8px;
+    width: 300px;
+    padding: 5px 1px;
+}
+
+.form--change--info{
+    padding: 5px 1px;
+}
+
+.form--change--pass button{
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #ff11118e;
+    color: white;
+    
+}
+
+
+
+
+.form--change--pass button:hover{
+    background-color: #394c98eb;
+    color: white;
+}
+
+.form--change--pass label{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 24px
+}
+
+
+.form--change--info input{
+
+    width: 300px;
+height: 35px;
+margin-top: 6px;
+border-radius: 8px;
+}
+
+.form--change--info button{
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #ff111189;
+}
+
+
+.form--change--info button:hover{
+    background-color: #de780aeb;
+    color: white;
+}
+
+.form--change--info textarea{
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form--change--info label{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 24px
+}
+
+/* and settings */
+
+
+
+/* product--wrapper */
+.product--wrapper{
+	display: none;
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+
+
+
+.head--product{
+
+    height: 70px;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    display: flex;
+    padding: 3px;
+    align-items: center;
+}
+
+
+.selet--product{
+
+    color: white;
+    display: flex;
+    width: 45%;
+    background-color: rgba(153, 205, 50, 0);
+}
+
+.selet--product button{
+    width: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20%;
+    margin-left: 10px;
+
+}
+
+
+.add--product{
+    width: 45%;
+    background-color: rgba(0, 139, 139, 0.024);
+    text-align: right;
+
+}
+
+.add--product button{
+    padding: 8px 3px;
+    background-color: #054b92d8;
+    color: white;
+    border-radius: 6px;
+    
+}
+
+.content--products{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 0, 0, 0);
+    padding-top: 10px;
+    gap: 3px;
+}
+
+.box--product{
+    background: rgba(119, 137, 150, 0.777);
+    width: 170px;
+    height: 320px;
+    margin: 0px;
+    
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box--product .artg{
+    color: rgba(255, 255, 255, 0.792);
+    font-size: 13px;
+}
+
+.title--product{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(32, 29, 29);
+}
+
+.box--product .price{
+    font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box--price{
+    display: flex;
+    align-items: center;
+}
+.box--product h2{
+    font-size: 19px;
+}
+
+.box--product img{
+    width: 100%;
+}
+
+.box--product button{
+    padding: 10px 10px;
+    border-radius: 9px;
+    color: green;
+}
+
+
+
+/* *********** tabular--wrapper *** */
+
+.tabular--wrapper{
+	display: none;
+    background: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table-container{
+    width: 100%;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+thead{
+    background: rgba(113, 99, 186);
+    color: white    ;
+}
+
+th{
+    padding: 15px;
+    text-align: left;
+
+}
+
+
+tbody{
+    background: #f2f2f2;
+}
+
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+tr:nth-child(even){
+    background: white;
+
+}
+
+tfoot{
+    background: rgba(113, 99, 255);
+    font-weight: bold;
+    color: white;
+
+}
+
+tfoot td{
+    color: white;
+    padding: 15px;
+}
+
+.table-container button{
+    color: green;
+    background: none;
+    cursor: pointer;
+
+}
+
+
+.box--dash--produt{
+	display: flex;
+	gap: 5px;
+	padding-top: 10px;
+	flex-wrap: wrap;
+	
+
+}
+
+
+
+
+
+</style>
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static' ,filename='css/style.css')}}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{url_for('static',filename='css/responsive.css')}}" rel="stylesheet" />
+
+    <title>Dash Board Design</title>
+</head>
+<body>
+   <main>
+        <div class="mycampany">
+
+            <div class="logo">
+                <img style="width: 50px; height: 50px; border-radius: 25px;" src="{{url_for('static', filename='icons/iconsolu.png')}}" />
+
+            </div>
+            <ul class="menu">
+                <li class="active">
+                    <a onclick="showhideDash('dh')"  href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>DASHBOARD</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showhideDash('pf')"  href="#">
+                        <i class="fas fa-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showhideDash('st')" href="#">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Statistica</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showhideDash('pdt')" href="#">
+                        <i class="fas fa-database"></i>
+                        <span>Produtos</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showhideDash('rv')" href="#">
+                        <i class="fas fa-bookmark"></i>
+                        <span>Reservas</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showhideDash('msg')" href="#">
+                        <i class="fas fa-message"></i>
+                        <span>Mensagem</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showhideDash('conf')" href="#">
+                        <i class="fas fa-gears"></i>
+                        <span>Configurracoes</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="eletro-admin-login">
+                        <i class="fas fa-right-from-bracket"></i>
+                        <span>Log Out</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        
+    </main>
+    <div  class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title" style="color: white;">
+                <span>Eletro Solucoes</span>
+                <h2>DASHBOARD</h2>
+            </div>
+            <div class="user--info">
+                <div class="search--bok">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text">
+                </div>
+                
+                <!--img src="imgGame/icondl1.png" /--> 
+
+            </div>
+        </div>
+        <div id="mdash" class="card--container">
+            <h3 class="main--title">Dados do Site</h3>
+            <div class="card--wrapper">
+                <div class="payment--card light-red">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Nossos Clientes
+
+                            </san>
+                            <span class="amount--value">
+                                {{interacoes}}
+                            </span>
+
+
+                        </div>
+                        <i class="fas fa-users icon"></i>
+                    </div>
+                    <span class="card--detail">
+                        CLIENTES ONLINE
+                    </span>
+
+                </div>
+                <div class="payment--card light-purple">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Produtos
+                            </san>
+                            <span class="amount--value">
+                                {{numProdutos}}
+                            </span>
+
+
+                        </div>
+                        <i class="fas fa-list icon dark-purple"></i>
+                    </div>
+                    <span class="card--detail">
+                        TODAS PECAS LOGADAS
+                    </span>
+
+                </div>
+                <div class="payment--card light-blue">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Produtos Reservados
+
+                            </san>
+                            <span class="amount--value">
+                                {{numReservas}}
+                            </span>
+
+
+                        </div>
+                        <i class="fas fa-check icon dark-blue"></i>
+                    </div>
+                    <span class="card--detail">
+                        RESERVAS DAS 24H A
+                    </span>
+
+                </div>
+                <div class="payment--card light-green">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Mensagems dos Clientes
+
+                            </san>
+                            <span class="amount--value">
+                                {{numMsg}}
+                            </span>
+
+
+                        </div>
+                        <i class="fas fa-message icon dark-green"></i>
+                    </div>
+                    <span class="card--detail">
+                        RECLAMACOES E  PEDIDOS
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="statistic-w" class="statistic--wrapper">
+            <div class="head--statistic">
+                <div class="logo--statistic">
+
+                </div>
+                <h3>Estatisticas</h3>
+
+            </div>
+            <div class="content--statistic">
+
+
+                <div class="box--graf--visite">
+                    <div class="box--graf--info--visite">
+                        <h3>Grafico de Visitas</h3>
+                       <p>Visitas de Hoje 39</p> 
+                        <p>Visitas da semana 2092</p>
+                        <p>Visitas do mes 234534</p>
+                    </div>
+                    <canvas id="myChartVisite" style="width: 399px; height:200px" class="graf--visite">
+
+                    </canvas>
+                </div>
+
+                <div class="box--graf--reserv">
+                    
+                    <div class="box--graf--info--reserv">
+                        <h3>Grafico de Reservas</h3>
+                       <p>Visitas de Hoje 39</p> 
+                        <p>Visitas da semana 2092</p>
+                        <p>Visitas do mes 234534</p>
+                    </div>
+                    
+
+                        <canvas id="myChartReserv" style="width: 399px; height:200px" class="graf--reserv"></canvas>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-w" class="settings--wrapper">
+            <div class="head--settings">
+
+                
+                <h3>Configuracoes</h3>
+            </div>
+            <div class="content--settings">
+
+                <div class="card--settings">
+
+                    <div onclick="showhidesttg('ifo')" class="settings--edit--info">
+
+                        <div class="box--icon--info">
+                            <img src="{{url_for('static', filename='icons/website.png')}}" alt="icon"/>
+                        </div>
+                        <h3>Mudar informaco do site</h3>
+                    </div>
+
+                    <div onclick="showhidesttg('pas')" class="settings--change--pass">
+
+                        <div class="box--icon--pass">
+                            <img src="{{url_for('static', filename='icons/setting.png')}}" alt="icon"/>
+                        </div>
+                        
+                        
+                        
+                        <h3>Trocar a Senha De Acesso</h3>
+                    </div>
+                </div>
+
+                <div class="settings--form">
+                    <form id="c-pass"  class="form--change--pass">
+
+                        <label>Prencha os Campios Devidamente</label><br>
+                        <input placeholder="senha anterior"/><br>
+                        <input placeholder="Nova Senha"/><br>
+                        <input placeholder="Confirmar a Senha" /><br>
+                        <button>Trocar a Senha</button>
+
+                    </form>
+                    <form id="c-info"  class="form--change--info">
+
+                        <label>Prenche o Campo Que Deseja Mudar</label><br>
+
+                        <input placeholder="titilo do Site"/><br>
+                        <input placeholder="localizacao"/><br>
+                        <input placeholder="Cordenadas" /><br>
+
+                        
+                        
+                        <br>
+
+                        <input placeholder="senha para confirmar" />
+                        <br>
+                        <button>mudar informacoees</button>
+
+                    </form>
+                </div>
+                
+
+
+
+            </div>
+        </div>
+
+        <!-- *******   start message wrapper ***** -->
+
+        <div id="msg-w" class="msg--wrapper">
+            <div class="head--msg">
+
+                
+                
+                <h2>Todas Mensangens</h2>
+            </div>
+            <div class="content--msg">
+                
+
+{{mensangens | safe}}
+
+               
+            </div>
+        </div>
+        <!-- *******   and message wrapper ***** -->
+
+
+
+        <!-- ****** start product wrapper ****** -->
+        <div id="product-w" class="product--wrapper">
+            <div class="head--product">
+                <div class="selet--product">
+                    <h2>Todos</h2>
+                    <button></button>
+                </div>
+                <div class="add--product">
+                   <a href="/dashboard/add_product" ><button>Adicionar Produto</button></a>
+                </div>
+            </div>
+            <div class="box--dash--produt">
+            {{products | safe}}
+            </div>
+            
+        </div>
+
+
+
+        <!-- ***** and product wrapper **** -->
+
+
+        <div id="my--info-w" class="my--info--wrapper">
+            <div class="head--info">
+                <div class="info--logo">
+                    <img style="width: 40px; height: 40px; border-radius: 20px;" src="{{url_for('static', filename='icons/iconsolu.png')}}" alt= "logo" />
+                </div>
+                <div class="info--name">
+                    <h2 class="title--info">
+                        Eletro Solucoes LTD
+                    </h2>
+                </div>
+            </div>
+            <div class="content--info">
+                <p>Nome da Empresa: Eletro Solucoes Ltd</p>
+                <p>localizacao: Mocambique</p>
+                <p>cordenadas: l23.67.7 l567.77..22</p>
+
+                <p>A Eletro Solucoes e uma Empresa de Venda de 
+                    Pecas De Viaturas , Todas As Marcas e Porte
+                </p>
+
+                <button>IR aos Cofiguracoes</button>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div id="table-w" class="tabular--wrapper">
+            <h3 class="main--title">
+                Detathes de Reservas
+            </h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Nome do Cliente</th>
+                            <th>Peca</th>
+                            <th>Contato</th>
+                            <th>Preco</th>
+                            <th>Artigo N</th>
+                            <th>Status</th>
+                            <th>Accao</th>
+
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{reservas | safe}}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="9">Total reservados {{numReservas}} </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- javascript Graficos -->
+
+    <script>
+        const ctx = document.getElementById('myChartVisite');
+        const ctx2 = document.getElementById('myChartReserv');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['segunda', 'terca', 'Quarta', 'quinta', 'sexta', 'sabado','domingo'],
+            datasets: [{
+              label: '# acessos',
+              data: [12, 19, 3, 5, 2, 3,30],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+
+        new Chart(ctx2, {
+          type: 'bar',
+          data: {
+            labels: ['segunda', 'terca', 'Quarta', 'quinta', 'sexta', 'sabado','domingo'],
+            datasets: [{
+              label: '# reservas',
+              data: [12, 19, 63, 5, 2, 3,30],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      <script>
+      	function showhideDash(secao){
+      	
+      	mdash = document.getElementById("mdash");
+      	mconf = document.getElementById("settings-w");
+      	myInfo = document.getElementById("my--info-w");
+      	statist = document.getElementById("statistic-w");
+      	product = document.getElementById("product-w");
+      	msg = document.getElementById("msg-w");
+      	reserv = document.getElementById("table-w");
+      	
+      	
+      	
+      		if (secao == "pdt"){
+      			product.style.display = "block";
+      			
+      			msg.style.display = "none";
+      			statist.style.display = "none";
+      			reserv.style.display = "none";
+      			mdash.style.display = "none";
+      			mconf.style.display = "none";
+      			myInfo.style.display = "none";
+      		}else if(secao == "msg"){
+      			msg.style.display = "block";
+      			
+      			product.style.display = "none";
+      			statist.style.display = "none";
+      			reserv.style.display = "none";
+      			mdash.style.display = "none";
+      			mconf.style.display = "none";
+      			myInfo.style.display = "none";
+      		
+      		}else if(secao == "st"){
+      			statist.style.display = "block";
+      			
+      			msg.style.display = "none";
+      			product.style.display = "none";
+      			reserv.style.display = "none";
+      			mdash.style.display = "none";
+      			mconf.style.display = "none";
+      			myInfo.style.display = "none";
+      		
+      		}else if(secao == "rv"){
+      			reserv.style.display = "block";
+      			
+      			msg.style.display = "none";
+      			statist.style.display = "none";
+      			product.style.display = "none";
+      			mdash.style.display = "none";
+      			mconf.style.display = "none";
+      			myInfo.style.display = "none";
+      		
+      		}else if(secao == "dh"){
+      			mdash.style.display = "block";
+      			
+      			msg.style.display = "none";
+      			statist.style.display = "none";
+      			reserv.style.display = "none";
+      			product.style.display = "none";
+      			mconf.style.display = "none";
+      			myInfo.style.display = "none";
+      		
+      		}else if(secao == "conf"){
+      			mconf.style.display = "block";
+      			
+      			
+      			msg.style.display = "none";
+      			statist.style.display = "none";
+      			reserv.style.display = "none";
+      			mdash.style.display = "none";
+      			product.style.display = "none";
+      			myInfo.style.display = "none";
+      		
+      		}else if(secao == "pf"){
+      			myInfo.style.display = "block";
+      			
+      			msg.style.display = "none";
+      			statist.style.display = "none";
+      			reserv.style.display = "none";
+      			mdash.style.display = "none";
+      			mconf.style.display = "none";
+      			product.style.display = "none";
+      		
+      		
+      		}
+      		
+      		//alert("ola mundo!");
+      		
+      	}
+      	
+      	
+      	function showhidesttg(typeSg){
+      		cp = document.getElementById("c-pass");
+      		ci = document.getElementById("c-info");
+      		
+      		if (typeSg == "ifo"){
+      			//alert("fimciona");
+      		
+      		ci.style.display = "block";
+      		cp.style.display = "none";
+      		
+      		}else{
+      			
+      			ci.style.display = "none";
+      			cp.style.display = "block";
+      			//alert("finciona!");
+      		
+      		}
+      		
+      	}
+      </script>
+      
+</body>
+</html>

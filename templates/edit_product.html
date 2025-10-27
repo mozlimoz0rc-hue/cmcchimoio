@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Editar Produto</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.css')}}" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/font-awesome.min.css')}}" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static' ,filename='css/style.css')}}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{url_for('static',filename='css/responsive.css')}}" rel="stylesheet" />
+
+<style>
+	#cfm_pdt{
+	display: none;
+	
+	}
+
+</style>
+</head>
+
+<body>
+  
+    <!-- header section strats -->
+    <header class="header_section">
+      
+      <div style="background-color: #0355cc;" class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              
+                Editar Produto
+             
+            </a>
+
+            
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+            
+            <h2 class="left--title">
+             {{nomeProd}}
+            </h2>
+           
+            
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <img src="{{imgProd}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+          <form>
+          <label style="color: darkorange;">Nome Do Produto: </label><br>
+            <input style="width: 100%; height: 40px; margin: 10px 0" value="{{nomeProd}}" style="color: #126799;"><br>
+              
+            <label style="color: darkorange;">PRECO:  MTN</label><br>
+            <input <input style="width: 100%; height: 40px; margin: 10px 0" value="{{precoProd}}" style="color: darkorange;"><br>
+            <label style="color: darkorange;">Detalhes do Produto</label><br>
+            <textarea style="width: 100%; margin: 10px 0; min-height: 100px;">
+             {{detalheProd}}
+            </textarea>
+            
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            
+            <a href="/reserv/{{linkReserv}}"><button type="submit">Atualizar Produto</button></a>
+            </form>
+           <button onclick="eliOrNoEli()" style="background-color: red; color: white;">Eliminar
+            </button>
+            
+              <button id="cfm_pdt" style="background-color: orange; color: white;">Confirmar Remocao
+            </button>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- end about section -->
+
+  <!-- info section -->
+</section>
+  <!-- info section -->
+  
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> developed by  
+        <a href="https://bsoft-tecnology-production.up.railway.app/projectos-bsoft">BSoft Technology</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+<script>
+function eliOrNoEli(){
+	btn_cfm = document.getElementById("cfm_pdt");
+	
+	if (btn_cfm.style.display == "none"){
+	
+		btn_cfm.style.display = "block";
+	
+	}else{
+	
+		btn_cfm.style.display = "none";
+	}
+	
+}
+
+
+
+
+	document.getElementById("cfm_pdt").addEventListener('click', () => {
+		
+		alert("O sistema esta a Processar \n click OK");
+		
+		fetch("/eletro-rm-product/{{linkrm}}")
+			.then(response => response.json())
+			.then(data => {
+				alert(`Produto: ${data.nome} Eliminado.`) ;
+			
+			});
+	});
+
+</script>
+
+
+
+</script>
+  <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+
+</body>
+
+</html>
